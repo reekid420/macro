@@ -357,14 +357,14 @@ class MacroGUI(QMainWindow):
             index = self.macro_list.row(selected_item)
             action = self.macro_actions[index]
             if action['type'] == 'click':
-                new_delay, ok = QInputDialog.getDouble(self, 'Edit Delay', 'Enter new delay:', action['delay'], 0, 100, 2)
+                new_delay, ok = QInputDialog.getDouble(self, 'Edit Delay', 'Enter new delay:', action['delay'], 0, 1000, 2)
                 if ok:
                     action['delay'] = new_delay
             elif action['type'] == 'key':
                 new_key, ok = QInputDialog.getText(self, 'Edit Key', 'Enter new key:', text=action['key'])
                 if ok:
                     action['key'] = new_key
-                new_delay, ok = QInputDialog.getDouble(self, 'Edit Delay', 'Enter new delay:', action['delay'], 0, 100, 2)
+                new_delay, ok = QInputDialog.getDouble(self, 'Edit Delay', 'Enter new delay:', action['delay'], 0, 1000, 2)
                 if ok:
                     action['delay'] = new_delay
             self.update_macro_list()

@@ -1,0 +1,6 @@
+pyautogui
+PyQt5
+pynput
+pywin32
+pydirectinput
+pyperclip
